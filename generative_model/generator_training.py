@@ -74,6 +74,7 @@ def propagation(inp, target, mode):
     if mode=='train':
         loss.backward()
         optimizer.step()
+    return loss.item()/sequence_length
     return loss.data[0]/sequence_length
 
 
